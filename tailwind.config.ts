@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -30,7 +31,7 @@ const config: Config = {
           gray800: "#1D2939",
           white: "#f1f5f9",
         },
-        background: "#1e293b"
+        background: "#1e293b",
       },
     },
     fontFamily: {
