@@ -1,20 +1,42 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        light: {
+          transparent: "transparent",
+          current: "currentColor",
+          primaryBlue: "#0062FF",
+          secondaryBlue: "#0F1222",
+          success700: "#027A48",
+          gray: {
+            200: "#EAECF0",
+            250: "#FCFCFD",
+            800: "#1D2939",
+            900: "#101828",
+          },
+          background: "#FAFAFB",
+        },
+        dark: {
+          primaryBlue: "#0F1222",
+          sencondaryBlue: "#0062FF",
+          background: "#55555",
+          gray800: "#1D2939",
+          white: "#f1f5f9",
+        },
+        background: "#1e293b"
       },
+    },
+    fontFamily: {
+      manrope: ["Manrope", "sans-serif"],
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
