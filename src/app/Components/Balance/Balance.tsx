@@ -19,7 +19,7 @@ export default function Balance() {
   }, [updateValue]);
 
   return (
-    <section className=" w-[412.47px] h-[193.19px] bg-light-background rounded-md p-[23px] flex flex-col gap-6">
+    <section className=" w-[412.47px] h-[193.19px] bg-white rounded-md p-[23px] flex flex-col gap-6">
       <div className="justify-start items-center gap-[268.54px] inline-flex">
         <h4 className="text-light-gray-900 text-xl font-bold font-Manrope leading-[28.98px]">Balance</h4>
         <Info />
