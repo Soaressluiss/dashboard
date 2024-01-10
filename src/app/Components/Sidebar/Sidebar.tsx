@@ -7,7 +7,7 @@ import { Logo } from "../../../../public/assets/Icons/Logo";
 import { Menu } from "../../../../public/assets/Icons/Menu";
 import { User } from "../../../../public/assets/Icons/User";
 import { Settings } from "../../../../public/assets/Icons/settings";
-import { Money } from "../../../../public/assets/Icons/money";
+import { Money } from "../../../../public/assets/Icons/Money";
 
 export default function SideBar() {
   const [selectedMenuItem, setSelectedMenuItem] = useState<string>("Dashboard");
@@ -46,7 +46,7 @@ export default function SideBar() {
   ];
 
   return (
-    <section className="bg-black w-72 h-screen flex flex-col items-center gap-4">
+    <section className="bg-black w-full h-screen flex flex-col items-center gap-4">
       <div className="m-10 cursor-pointer">
         <Logo />
       </div>
