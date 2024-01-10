@@ -1,5 +1,5 @@
 import { Sun } from "../../../../public/assets/Icons/Sun";
-import { Notification } from "../../../../public/assets/Icons/Notification";
+import { Notifications } from "../../../../public/assets/Icons/Notifications";
 import Image from "next/image";
 import avatar from "../../../../public/assets/avatares/Avatar00.png";
 import { ArrowDown } from "../../../../public/assets/Icons/ArrowDown";
@@ -15,7 +15,7 @@ export default function Header() {
       </article>
       <article className=" flex items-center justify-between gap-x-4">
       <button>
-        <Notification />
+        <Notifications />
       </button>
         <Image src={avatar} height="46" width="46" alt="avatar" />
         <p className="text-light-gray-900 text-xl font-bold font-Manrope leading-[28.98px]">Kathryn</p>
