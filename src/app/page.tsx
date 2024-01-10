@@ -1,3 +1,7 @@
-export default function Home() {
-  return <main className=""></main>;
+import Balance from "./Components/Balance/Balance";
+
+export default function Dashboard() {
+  return <main className="">
+    <Balance/>
+  </main>;
 }
