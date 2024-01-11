@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <section className="col-span-1">
             <SideBar />
           </section>
-          <section className="col-span-3">
+          <section className="col-span-3 bg-light-background">
             <Header />
             {children}
           </section>

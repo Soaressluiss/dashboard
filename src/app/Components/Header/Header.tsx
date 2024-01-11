@@ -6,7 +6,7 @@ import { ArrowDown } from "../../../../public/assets/Icons/ArrowDown";
 
 export default function Header() {
   return (
-    <header className=" w-full  h-[96.60px] px-3 bg-light-background flex items-center justify-between">
+    <header className=" w-full  h-[96.60px] px-3 bg-white flex items-center justify-between">
       <article className=" flex items-center justify-between gap-x-3">
         <h2 className=" text-light-gray-900 text-[23.18px] font-bold font-manrope leading-[30.91px]">Good Morning</h2>
         <button>
