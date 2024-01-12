@@ -32,7 +32,7 @@ export default function ChartDates() {
   return (
     <section className=" flex flex-col gap-5 bg-white">
       <div className=" flex justify-between pt-5 px-5 items-center ">
-        <h4 className="text-light-gray-900 text-xl font-bold font-Manrope leading-[28.98px]">Insights</h4>
+        <h4 className="text-light-gray-900 text-xl font-bold font-manrope leading-[28.98px]">Insights</h4>
         <Info />
       </div>
       <Chart chartType="ColumnChart" height={"400px"} data={data} options={options} />

@@ -18,7 +18,7 @@ export default function Header() {
         <Notifications />
       </button>
         <Image src={avatar} height="46" width="46" alt="avatar" />
-        <p className="text-light-gray-900 text-xl font-bold font-Manrope leading-[28.98px]">Kathryn</p>
+        <p className="text-light-gray-900 text-xl font-bold font-manrope leading-[28.98px]">Kathryn</p>
         <button>
           <ArrowDown />
         </button>
