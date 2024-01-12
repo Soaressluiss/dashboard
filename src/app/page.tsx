@@ -1,6 +1,7 @@
 import Balance from "./Components/Balance/Balance";
 import ChartDates from "./Components/Chart/Chart";
 import FavTransfer from "./Components/FavTransfer/FavTransfer";
+import Transactions from "./Components/Transactions/Transactions";
 
 export default function Dashboard() {
   return (
@@ -10,6 +11,7 @@ export default function Dashboard() {
         <FavTransfer />
       </div>
       <ChartDates />
+      <Transactions />
     </main>
   );
 }

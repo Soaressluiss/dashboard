@@ -53,7 +53,7 @@ export default function SideBar() {
   ];
 
   return (
-    <section className="bg-black w-full h-screen flex flex-col items-center gap-4">
+    <section className="bg-black w-full h-full flex flex-col items-center gap-4">
       <div className="m-10 cursor-pointer">
         <Logo />
       </div>

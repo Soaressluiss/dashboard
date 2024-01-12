@@ -16,6 +16,7 @@ const config: Config = {
           primaryBlue: "#0062FF",
           secondaryBlue: "#0F1222",
           success700: "#027A48",
+          emerald400: "#32D5831A",
           gray: {
             200: "#EAECF0",
             250: "#FCFCFD",
