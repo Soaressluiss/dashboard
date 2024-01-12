@@ -3,7 +3,7 @@ import Image from "next/image";
 import Avata03 from "../../../../public/assets/avatares/Avatar03.png";
 import Avata04 from "../../../../public/assets/avatares/Avatar04.png";
 import Avata05 from "../../../../public/assets/avatares/Avatar05.png";
-
+import dayjs from "dayjs";
 interface ITransactionUser {
   id: number;
   name: string;
@@ -66,7 +66,7 @@ export default function TransactionUser() {
               {status}
             </span>
             <span className="labelRow">{amount}</span>
-            <span className="labelRow">{date.getDate()}</span>
+            <span className="labelRow">{dayjs(date.toISOString()).format("DD MMM YY")}</span>
           </div>
         ))}
       </div>
