@@ -7,7 +7,7 @@ import { Logo } from "../../../../public/assets/Icons/Logo";
 import { Menu } from "../../../../public/assets/Icons/Menu";
 import { User } from "../../../../public/assets/Icons/User";
 import { Settings } from "../../../../public/assets/Icons/settings";
-import { Money } from "../../../../public/assets/Icons/Money";
+import { Money } from "../../../../public/assets/Icons/MoneyIcon";
 import Link from "next/link";
 import { Close } from "../../../../public/assets/Icons/Close";
 
