@@ -31,11 +31,10 @@ const config: Config = {
         dark: {
           primaryBlue: "#0F1222",
           sencondaryBlue: "#0062FF",
-          background: "#55555",
+          background: "#1e293b",
           gray800: "#1D2939",
           white: "#f1f5f9",
         },
-        background: "#1e293b",
       },
       animation: {
         fadeIn: "fadeIn .4s ease",

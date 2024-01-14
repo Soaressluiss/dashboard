@@ -6,9 +6,9 @@
 
 @layer components {
   .labelTable {
-    @apply text-slate-800 text-base font-semibold font-['Manrope'] leading-[23.18px];
+    @apply text-slate-800 dark:text-dark-white text-base font-semibold font-['Manrope'] leading-[23.18px];
   }
   .labelRow {
-    @apply text-center text-light-gray-800 text-base font-semibold font-['Manrope'] leading-[23.18px];
+    @apply text-center text-light-gray-800 dark:text-dark-white text-base font-semibold font-['Manrope'] leading-[23.18px];
   }
 }
