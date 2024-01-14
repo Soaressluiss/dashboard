@@ -1,8 +1,10 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "./Components/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+   
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <section className="grid grid-cols-4">
-          <section className="col-span-1">
+        <section className="grid grid-cols-1 md:grid-cols-3 laptop:grid-cols-4 relative">
+          <section className="relative md:col-span-1 ">
             <SideBar />
           </section>
           <section className="col-span-3 bg-light-background">

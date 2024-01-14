@@ -11,32 +11,47 @@ import { Money } from "../../../../public/assets/Icons/Money";
 import Link from "next/link";
 import { Close } from "../../../../public/assets/Icons/Close";
 
-export default function SideBar() {
+interface props {
+  toggleMenu: boolean;
+  setToggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export default function MenuMobile({ toggleMenu, setToggleMenu }: props) {
   const [selectedMenuItem, setSelectedMenuItem] = useState<string>("Dashboard");
-
   const menu = [
     {
       icon: <Menu />,
       title: "Dashboard",
-      onClick: () => setSelectedMenuItem("Dashboard"),
+      onClick: () => {
+        setSelectedMenuItem("Dashboard");
+        setToggleMenu(false);
+      },
       path: "/",
     },
     {
       icon: <User />,
       title: "My Accounts",
-      onClick: () => setSelectedMenuItem("My Accounts"),
+      onClick: () => {
+        setSelectedMenuItem("My Accounts");
+        setToggleMenu(false);
+      },
       path: "/accounts",
     },
     {
       icon: <CreditCard />,
       title: "My Cards",
-      onClick: () => setSelectedMenuItem("My Cards"),
+      onClick: () => {
+        setSelectedMenuItem("My Cards");
+        setToggleMenu(false);
+      },
       path: "/cards",
     },
     {
       icon: <Money />,
       title: "Fund Transfer",
-      onClick: () => setSelectedMenuItem("Fund Transfer"),
+      onClick: () => {
+        setSelectedMenuItem("Fund Transfer");
+        setToggleMenu(false);
+      },
       path: "/transfer",
     },
     {
@@ -54,8 +69,12 @@ export default function SideBar() {
   ];
 
   return (
-    <section className=" hidden laptop:left-0 laptop:relative bg-black w-full laptop:h-full laptop:flex flex-col items-center gap-4">
-      <span className=" absolute laptop:hidden right-0 m-2">
+    <section
+      className={`${
+        !toggleMenu && `hidden`
+      } absolute animate-fadeIn top-0  laptop:left-0 laptop:hidden bg-black  rounded-md laptop:rounded-none md:w-full laptop:h-full flex-col items-center gap-4`}
+    >
+      <span onClick={() => setToggleMenu(false)} className=" absolute laptop:hidden right-0 m-2">
         <Close />
       </span>
       <div className=" m-10 cursor-pointer bg-black">
@@ -65,7 +84,7 @@ export default function SideBar() {
         {menu.map((item, index) => (
           <Link
             href={item.path}
-            className={`flex gap-x-3 p-2 ml-3 items-center cursor-pointer hover:bg-light-gray-800 hover:rounded-tl-xl hover:rounded-bl-xl ${
+            className={`flex gap-x-3 p-2 md:p-3 ml-3 items-center cursor-pointer hover:bg-light-gray-800 hover:rounded-tl-xl hover:rounded-bl-xl ${
               selectedMenuItem === item.title ? "bg-light-primaryBlue rounded-tl-xl rounded-bl-xl" : "bg-black"
             } duration-100 ease-linear`}
             key={index}

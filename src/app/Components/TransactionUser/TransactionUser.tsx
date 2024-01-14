@@ -42,8 +42,8 @@ const dataTransactionUser: ITransactionUser[] = [
 
 export default function TransactionUser() {
   return (
-    <div className=" flex flex-col  border-collapse border-light-gray-200 ">
-      <div className=" h-11 border flex justify-around items-center gap-x-12">
+    <div className=" md:w-full flex flex-col  border-collapse border-light-gray-200 ">
+      <div className=" hidden h-11 border md:flex justify-around items-center gap-x-12">
         <span className="labelTable">Name</span>
         <span className="labelTable">Id</span>
         <span className="labelTable">Status</span>
@@ -52,15 +52,15 @@ export default function TransactionUser() {
       </div>
       <div>
         {dataTransactionUser.map(({ id, name, photo, status, amount, date }) => (
-          <div key={id} className="border grid grid-cols-5 mt-5 py-2 items-center">
+          <div key={id} className=" border flex flex-col md:grid md:grid-cols-5 mt-5 py-2 items-center ">
             <div className="flex items-center gap-x-1 mx-2 labelRow">
               {photo}
               {name}
             </div>
             <span className="text-center labelRow">{id}</span>
             <span
-              className={`text-center  ml-9 rounded-2xl tex-sm font-medium font-['Inter'] leading-tight p-[2px] bg-light-emerald400 max-w-max ${
-                status.includes("In") ? "text-light-success700 " : "bg-[#F044381A] text-[#F04437]"
+              className={`text-center md:ml-9 rounded-2xl tex-sm font-medium font-['Inter'] leading-tight p-[2px] bg-light-emerald400 max-w-max ${
+                status.includes("In") ? "text-light-success700 " : " bg-pink-200 text-[#F04437]"
               }`}
             >
               {status}

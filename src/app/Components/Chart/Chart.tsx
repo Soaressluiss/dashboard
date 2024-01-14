@@ -30,7 +30,7 @@ export default function ChartDates() {
     vAxis: { format: "short", gridlines: { count: 0 } },
   };
   return (
-    <section className=" flex flex-col gap-5 bg-white">
+    <section className="grid grid-cols-1 col-span-2 gap-5 bg-white">
       <div className=" flex justify-between pt-5 px-5 items-center ">
         <h4 className="text-light-gray-900 text-xl font-bold font-manrope leading-[28.98px]">Insights</h4>
         <Info />

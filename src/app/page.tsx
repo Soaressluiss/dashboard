@@ -5,12 +5,14 @@ import Transactions from "./Components/Transactions/Transactions";
 
 export default function Dashboard() {
   return (
-    <main className=" m-8 grid grid-cols-2">
-      <div className=" flex flex-col gap-y-7">
+    <main className=" md:m-8 md:grid flex flex-col items-center md:grid-cols-2 ">
+      <div className=" flex items-center flex-col gap-y-7">
         <Balance />
         <FavTransfer />
       </div>
-      <ChartDates />
+      <div className=" w-full">
+        <ChartDates />
+      </div>
       <Transactions />
     </main>
   );

@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        laptop: "900px",
+      },
       colors: {
         light: {
           transparent: "transparent",
@@ -34,10 +37,20 @@ const config: Config = {
         },
         background: "#1e293b",
       },
+      animation: {
+        fadeIn: "fadeIn .4s ease",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { transform: " translateX(-100px)", opacity: " 0;" },
+          "100%": { transform: "translateX(0)", opacity: "1;" },
+        },
+      },
     },
     fontFamily: {
       manrope: ["Manrope", "sans-serif"],
     },
+    
   },
   plugins: [],
 };
