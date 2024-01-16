@@ -60,7 +60,7 @@ export default function TransactionUser() {
             <span className="text-center labelRow">{id}</span>
             <span
               className={`text-center md:ml-9 rounded-2xl tex-sm font-medium font-['Inter'] leading-tight p-[2px] bg-light-emerald400 max-w-max ${
-                status.includes("In") ? "text-light-success700 " : " bg-pink-200 text-[#F04437]"
+                status.includes("In") ? "text-light-success700 " : " bg-light-pink200 text-[#F04437]"
               }`}
             >
               {status}
