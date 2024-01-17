@@ -1,6 +1,6 @@
 export function Notifications() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+    <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="none" viewBox="0 0 48 48">
       <circle cx="24" cy="24" r="24" fill="#F9FBFF"></circle>
       <g fill="#1D2939" clipPath="url(#clip0_101_19611)">
         <path d="M25.5 16.18a.5.5 0 01-.5-.5V14c0-.551-.449-1-1-1-.551 0-1 .449-1 1v1.68a.5.5 0 01-1 0V14c0-1.103.897-2 2-2s2 .897 2 2v1.68a.5.5 0 01-.5.5zM24 36c-1.93 0-3.5-1.57-3.5-3.5a.5.5 0 011 0c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5a.5.5 0 011 0c0 1.93-1.57 3.5-3.5 3.5z"></path>

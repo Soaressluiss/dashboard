@@ -26,7 +26,7 @@ export default function Header() {
         <ToggleTheme />
       </article>
       <article className=" flex items-center justify-between gap-x-4 md:gap-x-[38px]">
-        <button className=" z-0 animate-pulse hover:animate-none rounded-full hover:outline hover:outline-1 hover:outline-light-primaryBlue">
+        <button className=" z-0 w-6 md:w-10 animate-pulse hover:animate-none rounded-full hover:outline hover:outline-1 hover:outline-light-primaryBlue">
           <Notifications />
         </button>
         <div className=" flex items-center justify-center gap-x-3">
