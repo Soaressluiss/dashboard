@@ -73,7 +73,7 @@ export default function TransactionUser() {
               <td>
                 <span
                   data-title="Status:"
-                  className={` truncate tableLabelMobile md:text-center ml-0 md:ml-9 rounded-2xl text-[13px] md:text-sm font-medium font-['Inter'] leading-tight px-1 bg-light-emerald400 ${
+                  className={` truncate tableLabelMobile md:text-center ml-0 md:ml-9 rounded-2xl text-[13px] md:text-sm font-medium font-['Inter'] leading-tight px-2 bg-light-emerald400 ${
                     status.includes("In") ? "text-light-success700" : "bg-light-pink200 text-[#F04437]"
                   }`}
                 >
