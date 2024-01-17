@@ -38,7 +38,7 @@ export default function ChartDates() {
         </h4>
         <EllipsisVerticalIcon className=" h-5 text-black dark:text-white" />
       </div>
-      <Chart chartType="ColumnChart" height={"400px"} data={data} options={options} />
+      <Chart chartType="ColumnChart" height={390} data={data} options={options} />
     </section>
   );
 }

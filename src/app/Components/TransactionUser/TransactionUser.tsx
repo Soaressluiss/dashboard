@@ -4,6 +4,7 @@ import Avata03 from "../../../../public/assets/avatares/Avatar03.png";
 import Avata04 from "../../../../public/assets/avatares/Avatar04.png";
 import Avata05 from "../../../../public/assets/avatares/Avatar05.png";
 import dayjs from "dayjs";
+
 interface ITransactionUser {
   id: number;
   name: string;
@@ -42,34 +43,54 @@ const dataTransactionUser: ITransactionUser[] = [
 
 export default function TransactionUser() {
   return (
-    <div className=" md:w-full flex flex-col  border-collapse border-light-gray-200 ">
-      <div className=" hidden h-11 border md:flex justify-around items-center gap-x-12">
-        <span className="labelTable">Name</span>
-        <span className="labelTable">Id</span>
-        <span className="labelTable">Status</span>
-        <span className="labelTable">Amount</span>
-        <span className="labelTable">Date</span>
-      </div>
-      <div>
-        {dataTransactionUser.map(({ id, name, photo, status, amount, date }) => (
-          <div key={id} className=" border flex flex-col md:grid md:grid-cols-5 mt-5 py-2 items-center ">
-            <div className="flex items-center gap-x-1 mx-2 labelRow">
-              {photo}
-              {name}
-            </div>
-            <span className="text-center labelRow">{id}</span>
-            <span
-              className={`text-center md:ml-9 rounded-2xl tex-sm font-medium font-['Inter'] leading-tight p-[2px] bg-light-emerald400 max-w-max ${
-                status.includes("In") ? "text-light-success700 " : " bg-light-pink200 text-[#F04437]"
-              }`}
+    <div className=" w-full">
+      <table className="w-full border-collapse border-light-gray-200">
+        <thead>
+          <tr className="hidden md:flex h-11 justify-around border rounded-lg items-center gap-x-16">
+            <th className="labelTable">Name</th>
+            <th className="labelTable">ID</th>
+            <th className="labelTable">Status</th>
+            <th className="labelTable">Amount</th>
+            <th className="labelTable">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {dataTransactionUser.map(({ id, name, photo, status, amount, date }) => (
+            <tr
+              key={id}
+              className=" border rounded-lg flex flex-col p-5 md:grid md:grid-cols-5 mt-5 py-2 items-center justify-center "
             >
-              {status}
-            </span>
-            <span className="labelRow">{amount}</span>
-            <span className="labelRow">{dayjs(date.toISOString()).format("DD MMM YY")}</span>
-          </div>
-        ))}
-      </div>
+              <td data-title="Name:" className=" tableLabelMobile labelRow ">
+                <div className="flex items-center sm:gap-0 laptop:gap-x-3 mx-2 truncate ">
+                  <span className=" hidden laptop:block">{photo}</span>
+                  <p className=" text-sm md:text-base">{name}</p>
+                </div>
+              </td>
+              <td data-title="Id:" className=" tableLabelMobile text-right md:text-center labelRow">
+                {id}
+              </td>
+
+              <td>
+                <span
+                  data-title="Status:"
+                  className={` truncate tableLabelMobile md:text-center ml-0 md:ml-9 rounded-2xl text-[13px] md:text-sm font-medium font-['Inter'] leading-tight px-1 bg-light-emerald400 ${
+                    status.includes("In") ? "text-light-success700" : "bg-light-pink200 text-[#F04437]"
+                  }`}
+                >
+                  {status}
+                </span>
+              </td>
+
+              <td data-title="Amount:" className=" tableLabelMobile labelRow">
+                {amount}
+              </td>
+              <td data-title="Date:" className=" tableLabelMobile labelRow">
+                {dayjs(date.toISOString()).format("DD MMM YY")}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

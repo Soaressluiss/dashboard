@@ -9,8 +9,13 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+
+      content:{
+        imageBalance:'url("/assets/Linebackground.svg")'
+      },
       screens: {
-        laptop: "900px",
+        smPhone:"500px",
+        laptop: "1200px",
       },
       colors: {
         light: {

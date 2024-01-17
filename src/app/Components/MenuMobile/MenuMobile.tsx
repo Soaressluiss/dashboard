@@ -72,20 +72,22 @@ export default function MenuMobile({ toggleMenu, setToggleMenu }: props) {
     <section
       className={`${
         !toggleMenu && `hidden`
-      } absolute animate-fadeIn top-0  laptop:left-0 laptop:hidden bg-black  rounded-md laptop:rounded-none md:w-full laptop:h-full flex-col items-center gap-4`}
+      }z-40 absolute animate-fadeIn top-0  laptop:left-0 laptop:hidden bg-light-secondaryBlue  rounded-md laptop:rounded-none md:w-full laptop:h-full flex-col items-center gap-4`}
     >
       <span onClick={() => setToggleMenu(false)} className=" absolute laptop:hidden right-0 m-2">
         <Close />
       </span>
-      <div className=" m-10 cursor-pointer bg-black">
+      <div className=" m-10 cursor-pointer bg-light-secondaryBlue">
         <Logo />
       </div>
-      <nav className="w-full max-h-max flex flex-col relative gap-1 md:gap-5 bg-black">
+      <nav className="w-full max-h-max flex flex-col relative gap-1 md:gap-5 bg-light-secondaryBlue">
         {menu.map((item, index) => (
           <Link
             href={item.path}
             className={`flex gap-x-3 p-2 md:p-3 ml-3 items-center cursor-pointer hover:bg-light-gray-800 hover:rounded-tl-xl hover:rounded-bl-xl ${
-              selectedMenuItem === item.title ? "bg-light-primaryBlue rounded-tl-xl rounded-bl-xl" : "bg-black"
+              selectedMenuItem === item.title
+                ? "bg-light-primaryBlue rounded-tl-xl rounded-bl-xl"
+                : "bg-light-secondaryBlue"
             } duration-100 ease-linear`}
             key={index}
             onClick={item.onClick}
