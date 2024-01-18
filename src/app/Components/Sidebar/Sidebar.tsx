@@ -54,7 +54,7 @@ export default function SideBar() {
   ];
 
   return (
-    <section className=" hidden laptop:left-0 laptop:relative bg-light-secondaryBlue w-full laptop:h-full laptop:flex flex-col items-center ">
+    <section className=" hidden laptop:fixed laptop:left-0  bg-light-secondaryBlue w-[290px] laptop:h-full laptop:flex flex-col items-center ">
       <span className=" absolute laptop:hidden right-0 m-2">
         <Close />
       </span>

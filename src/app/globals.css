@@ -11,7 +11,4 @@
   .labelRow {
     @apply text-right truncate md:text-center text-light-gray-800 dark:text-dark-white text-base font-semibold font-['Manrope'] leading-[23.18px];
   } 
-  .tableLabelMobile{
-    @apply before:content-[attr(data-title)] before:block before:float-left  before:text-light-gray-800 before:dark:text-dark-white before:text-base before:mr-8 md:before:hidden;
-  }
 }

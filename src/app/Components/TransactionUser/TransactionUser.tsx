@@ -43,12 +43,12 @@ const dataTransactionUser: ITransactionUser[] = [
 
 export default function TransactionUser() {
   return (
-    <div className=" w-full">
-      <table className="w-full border-collapse border-light-gray-200">
-        <thead>
-          <tr className="hidden md:flex h-11 justify-around border rounded-lg items-center gap-x-16">
+    <div className=" overflow-x-auto mb-6 laptop:mb-0">
+      <table className=" min-w-[960px] border-collapse border-light-gray-200">
+        <thead className="">
+          <tr className="flex h-11 justify-around border rounded-lg items-center gap-x-16">
             <th className="labelTable">Name</th>
-            <th className="labelTable">ID</th>
+            <th className="labelTable ">ID</th>
             <th className="labelTable">Status</th>
             <th className="labelTable">Amount</th>
             <th className="labelTable">Date</th>
@@ -58,35 +58,30 @@ export default function TransactionUser() {
           {dataTransactionUser.map(({ id, name, photo, status, amount, date }) => (
             <tr
               key={id}
-              className=" border rounded-lg flex flex-col p-5 md:grid md:grid-cols-5 mt-5 py-2 items-center justify-center "
+              className=" border rounded-lg p-5 grid grid-cols-[15%_1fr_1fr_33%_10%] sm:grid-cols-[25%_1fr_2fr_2fr_1fr] mt-5 py-2 items-center justify-center "
             >
-              <td data-title="Name:" className=" tableLabelMobile labelRow ">
+              <td className=" labelRow ">
                 <div className="flex items-center sm:gap-0 laptop:gap-x-3 mx-2 truncate ">
-                  <span className=" hidden laptop:block">{photo}</span>
+                  <span className="hidden laptop:block">{photo}</span>
                   <p className=" text-sm md:text-base">{name}</p>
                 </div>
               </td>
-              <td data-title="Id:" className=" tableLabelMobile text-right md:text-center labelRow">
-                {id}
-              </td>
+              <td className=" mx-auto md:text-center labelRow">{id}</td>
 
-              <td>
+              <td className=" mx-auto">
                 <span
-                  data-title="Status:"
-                  className={` truncate tableLabelMobile md:text-center ml-0 md:ml-9 rounded-2xl text-[13px] md:text-sm font-medium font-['Inter'] leading-tight px-2 bg-light-emerald400 ${
-                    status.includes("In") ? "text-light-success700" : "bg-light-pink200 text-[#F04437]"
+                  className={` truncate md:text-center  rounded-2xl text-[13px] md:text-sm font-medium font-['Inter'] leading-tight px-2  ${
+                    status.includes("In")
+                      ? " bg-light-emerald400 text-light-success700"
+                      : "bg-light-pink200 text-[#F04437]"
                   }`}
                 >
                   {status}
                 </span>
               </td>
 
-              <td data-title="Amount:" className=" tableLabelMobile labelRow">
-                {amount}
-              </td>
-              <td data-title="Date:" className=" tableLabelMobile labelRow">
-                {dayjs(date.toISOString()).format("DD MMM YY")}
-              </td>
+              <td className="  text-center laptop:mr-6 labelRow">{amount}</td>
+              <td className=" labelRow">{dayjs(date.toISOString()).format("DD MMM YY")}</td>
             </tr>
           ))}
         </tbody>

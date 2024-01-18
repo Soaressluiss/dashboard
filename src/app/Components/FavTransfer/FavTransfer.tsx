@@ -5,7 +5,7 @@ import Avatar02 from "../../../../public/assets/avatares/Avatar 02.png";
 
 export default function FavTransfer() {
   return (
-    <section className=" w-[300px] smPhone:w-[490px] md:w-[370px] laptop:w-[412.47px] h-[245.36px] md:h-[215.36px] laptop:h-[245.36px] p-6 bg-white dark:bg-dark-primaryBlue flex flex-col gap-5 rounded-md">
+    <section className=" w-[18.75rem] smPhone:w-[490px] md:w-[370px] laptop:w-[412.47px] h-[245.36px] md:h-[215.36px] laptop:h-[245.36px] p-6 bg-white dark:bg-dark-primaryBlue flex flex-col gap-5 rounded-md">
       <article className="w-full h-[29px] flex  justify-between items-center ">
         <h4 className="text-light-gray-900 dark:text-dark-white md:text-xl font-bold font-manrope leading-[28.98px]">
           Favourite Transfers
