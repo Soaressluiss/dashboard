@@ -19,7 +19,7 @@ export default function Balance() {
   }, [updateValue]);
 
   return (
-    <section className=" relative w-[300px] smPhone:w-[490px] md:w-[700px] laptop:w-[412.47px] h-[193.19px] bg-white dark:bg-dark-primaryBlue after:content-imageBalance after:inline-block after:absolute after:right-0 after:-bottom-1  rounded-md p-[23px] flex flex-col gap-6">
+    <section className=" relative w-[300px] smPhone:w-[490px] md:w-[370px] md:h-[215.36px] laptop:w-[412.47px] h-[193.19px] laptop:h-[193.19px] bg-white dark:bg-dark-primaryBlue after:content-imageBalance after:inline-block after:absolute after:right-0 after:-bottom-1  rounded-md p-[23px] flex flex-col gap-6">
       <div className=" items-center gap-x-6 justify-between inline-flex">
         <h4 className="text-light-gray-900  dark:text-dark-white text-xl font-bold font-manrope leading-[28.98px]">
           Balance
