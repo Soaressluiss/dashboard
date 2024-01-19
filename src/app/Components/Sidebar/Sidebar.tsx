@@ -59,7 +59,7 @@ export default function SideBar() {
         <Close />
       </span>
       <div className=" mt-[41px] mb-[48px] cursor-pointer  bg-dark-gray700 dark:bg-light-secondaryBlue">
-        <Link href={"/"}>
+        <Link href={"/"} title="N Banking">
           <Logo />
         </Link>
       </div>
@@ -67,7 +67,7 @@ export default function SideBar() {
         {menu.map((item, index) => (
           <Link
             href={item.path}
-            className={`flex gap-x-3 p-2 h-[47px] ml-[15px] items-center cursor-pointer hover:bg-light-gray-800 hover:rounded-tl-xl hover:rounded-bl-xl ${
+            className={`flex gap-x-3 p-2 h-[47px] ml-[15px] items-center cursor-pointer hover:bg-light-gray-800 dark:hover:bg-dark-gray700 hover:rounded-tl-xl hover:rounded-bl-xl ${
               selectedMenuItem === item.title
                 ? "bg-light-primaryBlue rounded-tl-xl rounded-bl-xl"
                 : "  bg-dark-gray700 dark:bg-light-secondaryBlue"

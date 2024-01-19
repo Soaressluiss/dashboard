@@ -31,12 +31,13 @@ export default function ChartDates() {
     vAxis: { format: "short", gridlines: { count: 0 } },
   };
   return (
-    <section className="grid grid-cols-1 col-span-2 gap-5 bg-white dark:bg-dark-primaryBlue">
+    <section
+      className="grid grid-cols-1 col-span-2 gap-5 bg-white dark:bg-dark-primaryBlue p-[2px] rounded-lg">
       <div className=" flex justify-between pt-5 px-5 items-center ">
-        <h4 className="text-light-gray-900 dark:text-dark-white text-xl font-bold font-manrope leading-[28.98px]">
+        <h4 className="text-light-gray-900 dark:text-dark-white text-lg md:text-xl font-bold font-manrope leading-[1.8113rem]">
           Insights
         </h4>
-        <EllipsisVerticalIcon className=" h-5 text-black dark:text-white" />
+        <EllipsisVerticalIcon className=" cursor-pointer h-5 text-black dark:text-white" />
       </div>
       <Chart chartType="ColumnChart" height={390} data={data} options={options} />
     </section>

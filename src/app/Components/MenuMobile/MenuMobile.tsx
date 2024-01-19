@@ -87,7 +87,7 @@ export default function MenuMobile({ toggleMenu, setToggleMenu }: props) {
   return (
     <section className={`${!toggleMenu && `hidden`} top-0 absolute z-40 w-full h-full bg-black/40 laptop:hidden  `}>
       <div ref={menuRef} className=" bg-dark-gray700 dark:bg-light-secondaryBlue w-1/2 smPhone:w-1/3 md:w-1/4 h-full animate-fadeIn pt-12 flex flex-col items-center gap-y-10">
-        <Link href="/" className=" cursor-pointer  bg-dark-gray700 dark:bg-light-secondaryBlue">
+        <Link href="/" title="N Banking" className=" cursor-pointer  bg-dark-gray700 dark:bg-light-secondaryBlue">
           <Logo />
         </Link>
         <nav className="w-full max-h-max flex flex-col gap-6  bg-dark-gray700 dark:bg-light-secondaryBlue">
