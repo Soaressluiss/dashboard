@@ -11,12 +11,13 @@ export default function Header() {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
   return (
+    <>
+      {toggleMenu && <MenuMobile toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />}
     <header
-      className=" sticky top-0 z-10 w-full h-14 md:h-[96.60px] px-3 laptop:px-7 bg-white dark:bg-dark-primaryBlue flex  md:gap-0 items-center justify-between border-b
+      className=" sticky top-0 z-10 w-full h-12 md:h-14 laptop:h-[96.60px] px-3 laptop:px-7 bg-white dark:bg-dark-primaryBlue flex  md:gap-0 items-center justify-between border-b
     border-light-gray-800/40 dark:border-dark-white/40"
     >
       <article className=" relative flex items-center justify-between gap-x-[13px]">
-        {toggleMenu && <MenuMobile toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />}
         <button className="block laptop:hidden" onClick={() => setToggleMenu(true)}>
           <Bars4Icon className=" h-8 text-black dark:text-white" />
         </button>
@@ -40,5 +41,6 @@ export default function Header() {
         </div>
       </article>
     </header>
+    </>
   );
 }

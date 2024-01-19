@@ -1,6 +1,6 @@
 
 export default function Accounts() {
   return (
-    <div>accounts</div>
+    <div className=" h-screen">accounts</div>
   )
 }

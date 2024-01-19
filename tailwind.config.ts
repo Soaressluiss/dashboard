@@ -38,6 +38,7 @@ const config: Config = {
           primaryBlue: "#0F1222",
           sencondaryBlue: "#0062FF",
           background: "#1e293b",
+          gray700: "#334155",
           gray800: "#1D2939",
           white: "#f1f5f9",
         },

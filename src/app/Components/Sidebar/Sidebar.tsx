@@ -54,23 +54,23 @@ export default function SideBar() {
   ];
 
   return (
-    <section className=" hidden laptop:fixed laptop:left-0  bg-light-secondaryBlue w-[290px] laptop:h-full laptop:flex flex-col items-center ">
+    <section className=" hidden laptop:fixed laptop:left-0   bg-dark-gray700 dark:bg-light-secondaryBlue w-[290px] laptop:h-full laptop:flex flex-col items-center ">
       <span className=" absolute laptop:hidden right-0 m-2">
         <Close />
       </span>
-      <div className=" mt-[41px] mb-[48px] cursor-pointer bg-light-secondaryBlue">
+      <div className=" mt-[41px] mb-[48px] cursor-pointer  bg-dark-gray700 dark:bg-light-secondaryBlue">
         <Link href={"/"}>
           <Logo />
         </Link>
       </div>
-      <nav className="w-full max-h-max flex flex-col relative gap-1 md:gap-[31px] bg-light-secondaryBlue">
+      <nav className="w-full max-h-max flex flex-col relative gap-1 md:gap-[31px]  bg-dark-gray700 dark:bg-light-secondaryBlue">
         {menu.map((item, index) => (
           <Link
             href={item.path}
             className={`flex gap-x-3 p-2 h-[47px] ml-[15px] items-center cursor-pointer hover:bg-light-gray-800 hover:rounded-tl-xl hover:rounded-bl-xl ${
               selectedMenuItem === item.title
                 ? "bg-light-primaryBlue rounded-tl-xl rounded-bl-xl"
-                : " bg-light-secondaryBlue"
+                : "  bg-dark-gray700 dark:bg-light-secondaryBlue"
             } duration-100 ease-linear`}
             key={index}
             onClick={item.onClick}
