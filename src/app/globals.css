@@ -10,5 +10,22 @@
   }
   .labelRow {
     @apply text-right truncate md:text-center text-light-gray-800 dark:text-dark-white text-base font-semibold font-['Manrope'] leading-[23.18px];
-  } 
+  }
+  * {
+    @apply transition-colors 
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #CCCCCC;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0F1222;
+  border-radius: 5px;
 }
