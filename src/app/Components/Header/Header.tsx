@@ -2,14 +2,22 @@
 import { Notifications } from "../../../../public/assets/Icons/Notifications";
 import Image from "next/image";
 import avatar from "../../../../public/assets/avatares/Avatar00.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuMobile from "../MenuMobile/MenuMobile";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import { ChevronDownIcon, Bars4Icon } from "@heroicons/react/24/solid";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+  const [greeting, setGreeting] = useState<string>("");
 
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+    const period = currentHour <= 12 ? "Morning" : currentHour <= 18 ? "Afternoon" : "Evening";
+
+    setGreeting(period);
+  }, []);
+  
   return (
     <>
       {toggleMenu && <MenuMobile toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />}
@@ -22,7 +30,7 @@ export default function Header() {
           <Bars4Icon className=" h-8 text-black dark:text-white" />
         </button>
         <h2 className=" hidden md:block text-light-gray-900 dark:text-dark-white text-[16px] md:text-[23.18px] font-bold font-manrope leading-[30.91px]">
-          Good Morning
+          Good {greeting}
         </h2>
         <ToggleTheme />
       </article>
