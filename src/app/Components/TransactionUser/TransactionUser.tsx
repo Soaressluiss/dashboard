@@ -44,7 +44,7 @@ const dataTransactionUser: ITransactionUser[] = [
 export default function TransactionUser() {
   return (
     <div className=" overflow-x-auto mb-6 laptop:mb-0">
-      <table className=" min-w-[960px] border-collapse border-light-gray-200">
+      <table className=" w-full min-w-[960px] border-collapse border-light-gray-200">
         <thead className="">
           <tr className="flex h-11 justify-around border rounded-lg items-center gap-x-16">
             <th className="labelTable">Name</th>

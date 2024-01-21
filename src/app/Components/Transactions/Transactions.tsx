@@ -10,7 +10,7 @@ export default function Transactions() {
         </h4>
         <EllipsisVerticalIcon className=" cursor-pointer h-5 text-black dark:text-white" />
       </div>
-      <div className=" px-2 md:px-0 max-w-[280px] smPhone:max-w-full">
+      <div className=" px-2 md:px-0 max-w-full w-full">
         <TransactionUser />
       </div>
     </section>
