@@ -2,8 +2,6 @@ export function Moon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
       version="1.1"
       viewBox="0 0 473.935 473.935"
       xmlSpace="preserve"

@@ -16,10 +16,10 @@ export default function ToggleTheme() {
 
   return (
     <>
-      <button className="block dark:hidden" onClick={toggle}>
+      <button className="block dark:hidden w-7 h-7" onClick={toggle}>
         <Moon />
       </button>
-      <button className="hidden dark:block" onClick={toggle}>
+      <button className="hidden dark:block w-7 h-7" onClick={toggle}>
         <Sun />
       </button>
     </>
